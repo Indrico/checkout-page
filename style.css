@@ -64,11 +64,25 @@ main h2{
     width: 100%;
 }
 
+input{
+    transition: 0.3s;
+}
+
+input:focus {
+    border: 1px solid dodgerblue;
+    box-shadow: 0px 0px 4px dodgerblue;
+}
+
+input:focus + .material-icons {
+    color: dodgerblue;
+}
+
 .form-group .material-icons {
     position: absolute;
     top: 33px;
     left: 10px;
     color: #828282;
+    transition: 0.3s;
 }
 
 .form-grid{
