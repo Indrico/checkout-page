@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Checkout Page</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<header> 
+		<h1>Checkout</h1>
+	</header>
+	<main>
+		<form class="field" id="form">
+			<div class="form-container">
+				<h2>Contact information</h2>
+				<div class="form-group">
+					<label for="email">E-mail</label>
+					<input type="email" name="email" required placeholder="Enter your email...">
+					<span class="material-icons">email</span>
+				</div>
+				<div class="form-group">
+					<label for="phone">Phone</label>
+					<input type="number" name="phone" required placeholder="Enter your phone...">
+					<span class="material-icons">phone</span>
+				</div>
+			</div>
+
+			<div class="form-container">
+				<h2>Shipping address</h2>
+				<div class="form-group">
+					<label for="name">Full name</label>
+					<input type="text" name="name" required placeholder="Enter your name..." value="Rodney Cotton">
+					<span class="material-icons">account_circle</span>
+				</div>
+				<div class="form-group">
+					<label for="address">Address</label>
+					<input type="text" name="address" required placeholder="Your address...">
+					<span class="material-icons">home</span>
+				</div>
+				<div class="form-group">
+					<label for="city">City</label>
+					<input type="text" name="city" required placeholder="Your City...">
+					<span class="material-icons">apartment</span>
+				</div>
+				<div class="form-group form-grid">
+					<div class="form-group-column">
+						<label for="country">Country</label>
+						<select name="country" required>
+							<option value="">Your country...</option>
+							<option value="Indonesia">Indonesia</option>
+							<option value="Singapore">Singapore</option>
+							<option value="Malaysia">Malaysia</option>
+						</select>
+						<span class="material-icons">public</span>
+					</div>
+					<div class="form-group-column">
+						<label for="postal">Postal code</label>
+						<input type="number" name="postal" required placeholder="Your postal code...">
+						<span class="material-icons">markunread_mailbox</span>
+					</div>
+				</div>
+				<div class="remember-me">
+					<input type="checkbox">Save this information for next time
+				</div>
+			</div>
+			<div class="btn-container">
+				<button class="btn-submit" type="submit">
+					Continue
+				</button>
+			</div>
+			
+		</form>
+		<div class="items">
+			<div class="checkout-item">
+				<img src="photo1.png">
+				<div class="checkout-details">
+					<p class="item-name">Vintage Backbag</p>
+					<div class="price">
+						<p class="discount-price">$54.99</p> 
+						<p class="normal-price">$94.99</p>
+					</div>
+					<div class="quantity">
+						<div class="minus-plus">
+							<span class="minus">-</span>
+							<div class="quantity-value">1</div>
+							<span class="plus">+</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="checkout-item">
+				<img src="photo2.png">
+				<div class="checkout-details">
+					<p class="item-name">Levi Shoes</p>
+					<div class="price">
+						<p class="discount-price">$74.99</p> 
+						<p class="normal-price">$124.99</p>
+					</div>
+					<div class="quantity">
+						<div class="minus-plus">
+							<span class="minus">-</span>
+							<div class="quantity-value">1</div>
+							<span class="plus">+</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="checkout-final">
+				<p>Shipping</p>
+				<p>$19</p>
+			</div>
+			<div class="checkout-final">
+				<p>Total</p>
+				<p>$148.98</p>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		created by indrico - devChallenges.io
+	</footer>
+	<script>
+		let form = document.getElementById('form');
+		form.addEventListener('submit', () => {
+			alert('Form was Submitted');
+		})
+	</script>
+</body>
+
+</html>
